@@ -1,0 +1,115 @@
+
+RAD Interface:
+=============
+1. Change version number. (done)
+2. Autocomplete folder name / DB name on key up. (done)
+3. Change media files page-set. (done)
+4. Ask for grid division. (done)
+
+Pages:
+======
+1. Fix forgot password, some crypt issue. (done)
+2. Fix pagination function. (done)
+3. Select header for page should be visual.
+4. Settings type as text or dropdown. (done)
+5. Copy media file to clipboard option.
+6. Upload directly from HTML editor page.
+7. New default theme. (done)
+8. Default password in text file. (done)
+10. FAQs status has issue
+9. Chosen 404 error (done)
+11. Search form ID increment (done)
+12. search-area should be class, not ID. (done)
+13. Fix form closing tag on update page. (done)
+14. Use placeholder in search fields. (done)
+15. Sorting should be done on table headers. (done)
+16. search_access should be a variable (done)
+17. Focus on first textbox on search page. (done)
+18. Hints (done)
+19. Single and new fontawesome (done)
+20. Change delete icon to cross (done)
+21. Change <script type="text/javascript"> to <script> (done)
+22. Weighted menu
+23. Columns settings 1/12 ~ 12/12 (done)
+24. Fix suQuery($sql); (done)
+25. Remove unwanted functions including suSort()
+26. Check with display_errors on
+27. Secure stream.php (done)
+28. Create folder name on keyup of database (done)
+28. Fix fontawesome missing icons (done)
+29. Reset password on lost password (done)
+30. Take to password after reset password (done)
+31. New login screen (done)
+32. New theme (done)
+33. Remember me checkbox size (done)
+34. default user email
+35. Remove duplicate CSS (done)
+36. Option should covert to selectbox (done)
+37. Image thumbnail (done)
+38. Take remote iframe to up. 
+39. Sortings Module (done)
+40. Sortings page size (done)
+41. Media Manager (done)
+42. Inline editing (done)
+43. User groups (done)
+44. getSettings without session check (done)
+45. Reset user password on email (done)
+46. Take to password change after auto password reset (done)
+47. Separate PHP_EXTENSION for local and web (done)
+48. Add a sort field in tables (done)
+49. Multi select checkbox css class (done)
+50. Use icon for add new.. (done)
+51. Save on ctrl S
+52. Rename blank table to template
+53. Users 1 and 2 cannot be deleted and are admin. User 1 will not show. (done)
+54. Title tag for icon buttons
+55. Logs module required. Can be enabled or disabled from settings.
+56. Preview password (done)
+57. User types
+58. Change generic error message (done)
+59. There is a private user (done).
+60. Add separator field type
+61. Autogen password (done)
+62. Mail password (done)
+63. New checkbox style (done)
+64. add and reload to be changed to fa (done)
+65. Skip should not come in remote
+66. Use suGetRealIP (done)
+67. User cannot update his groups (done)
+68. Do not change session reset on settings update (done)
+69. Check PHP_EXTENSION in all redirects
+70. Print email in debug mode (done)
+71. At least one group should be there (done)
+72. Access as array $access['delete']; (done)
+73. Sorting not showing (done)
+74. Preview page (done)
+75. fix 'true' in all pages (done)
+76. Update session on user update (done)
+77. Store RAPID generation settings in project
+78. urlencode/decode if HTMLarea 
+79. Remote group permissions check (done)
+80. Fix $faq__Se
+81. Processing button needed when creating project
+82. Permission should apply to active groups only (done)
+83. Add preview option to users module (done)
+84. Change plus and reload to font awesome (done)
+85. Invalid access page design (done)
+86. login page design (done)
+87. Show only modules that user has access to (done)
+88. Also check if group is active (done)
+89. Show action icons on mouse over only
+90. Fix inline edit manually on all pages (done)
+91. Settings page permission (done)
+92. Hide preview icon (done)
+93. Secure reload script
+94. Pass overay in all links (done)
+95. Login issue (done)
+96. More links to be shown as dropdown 
+97. Sort menu (done)
+98. Hash password (done)
+99. Option to update password (done)
+100. Password confirm password grids (done)
+101. Revert suCrypt and Decrypt (done)
+102. Change to table icon on sort page (done)
+103. add PHP_EXTENSION with $_POST[referrer] on remote
+104. Check with dash in module name

@@ -1,0 +1,26 @@
+body{
+    margin: 20px;
+    font-family: arial, tahoma, verdana;
+    font-size: 12px;
+}
+input[type=text],textarea,select{
+    width: 100%;
+    font-family: arial, tahoma, verdana;
+    font-size: 12px;
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 5px; 
+    border: 1px solid #EEE;
+    outline: none;
+}
+label{
+    width: 100%;
+    font-family: arial, tahoma, verdana;
+    font-size: 12px;
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 5px; 
+    border: 0px none;
+    outline: none;
+    font-weight: bold;
+}

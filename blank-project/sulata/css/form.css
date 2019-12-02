@@ -1,0 +1,12 @@
+/*FORM AREA*/
+#form-area{
+
+}
+
+
+.dateBox {  
+    background-image: url(images/calendar.gif);
+    background-position: right;
+    background-repeat: no-repeat;
+    cursor:pointer;
+} 

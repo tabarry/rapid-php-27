@@ -1,0 +1,30 @@
+- DB name auto-fills when project name is typed when creating a project.
+- DB user and password stores in cookie for future reference when creating project.
+- Grid division of fields is possible at page page creation level.
+- Project's default login and password is created and stored in config.php file.
+- This user does not show in Users module.
+- Media File and Media Categories have been merged to Media.
+- Password field is now hashed.
+- Lost password is reset and then sent by email.
+- Update password method has been changed.
+- Pagination function has been fixed.
+- Settings now has an option of text and dropdown.
+- HTMLArea has link to open Media Manager.
+- New default theme.
+- From closing tag on update page fixed.
+- Multiple search option added.
+- Sorting moved to table headers.
+- Font Awesome version upgraded.
+- Delete icon change to cross.
+- Menu is sortable.
+- Menu placement has three options. Sidebar, Top or Both.
+- No of links to show in sidebar and top can be defined in settings.
+- When images are uploaded, thumbnails are also created with 'th-' prefix.
+- Inline editing has been added.
+- Setting change takes effect for all users without logging in again.
+- User Groups module has been added.
+- Multi-select checkbox style has been changed.
+- Preview password option added.
+- Generic error message will show detailed error with DEBUG=TRUE.
+- Email prints in Debug mode.
+- Overlay is passed on every link.

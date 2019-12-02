@@ -1,0 +1,204 @@
+body{
+    font-family: "Trebuchet MS",Tahoma, Arial;
+    font-size:13px;
+    color:#000;
+}
+a{
+    color:#000; 
+}
+a:hover{
+    text-decoration: none; 
+}
+p {
+    font-size: 9pt;
+    margin: 1em 0;
+}
+input, button, select, textarea {
+    font-size: 9pt;
+}
+h1, h2, h3, h4 {
+    color: #000000;
+    margin: 0 0 1em;
+    text-transform: capitalize;
+}
+h4.showheader {
+    text-decoration: underline;
+}
+h4.showheader:hover {
+    cursor: pointer;
+}
+a, .aspan {
+    color: blue;
+    text-decoration: none;
+}
+.aspan:hover {
+    cursor: pointer;
+}
+a:visited {
+    color: blue;
+}
+div.clr {
+    clear: both;
+    height: 0;
+    overflow: hidden;
+}
+.sinput, .minput, .mselect, .mtextarea, .linput, .ltextarea {
+    border: 1px solid gray;
+    font-size: 9pt;
+    margin: 0;
+}
+.sinput {
+    width: 10em;
+}
+.minput, .mtextarea, .mselect {
+    width: 16em;
+}
+.linput, .ltextarea {
+    width: 32em;
+}
+fieldset {
+    border-width: 0;
+    font-size: 9pt;
+    margin: 0;
+    padding: 0;
+}
+fieldset.fsbg, fieldset.supportbg {
+    background-color: #F3F3F3;
+    border: 1px solid #E1E1E1;
+    padding: 1em;
+}
+fieldset.editinfo ol li input, fieldset.editinfo ol li select, fieldset.editinfo ol li textarea {
+    width: 15em;
+}
+fieldset.editinfo ol li img {
+    height: 15px;
+    width: 15px;
+}
+fieldset ol li label {
+    color: #000000;
+    float: left;
+    line-height: 1.5em;
+    margin: 0 0.2em 0 0;
+    padding: 0 0.4em 0 0;
+    width: 10em;
+}
+fieldset ol {
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+}
+fieldset li {
+    clear: left;
+    float: left;
+    margin: 0 0 0.3em;
+    padding: 0;
+}
+fieldset.fsbg, fieldset.fsbg ol li {
+    width: 27.5em;
+}
+fieldset.supportbg, fieldset.supportbg ol li {
+    width: 43.5em;
+}
+fieldset.submit {
+    border-style: none;
+    font-size: 9pt;
+    margin: 1em 0;
+}
+#form {
+    margin: 0 0 20px;
+}
+.option {
+    float: left;
+    height: 20px;
+    margin: 0 0 5px;
+    width: 100px;
+}
+#carbox, #box, #boxstatic {
+    background-color: #FFFFFF;
+    border: 1px solid gray;
+    font-size: 8pt;
+    margin: 1em 0;
+}
+#carbox input {
+    margin: 0;
+}
+.carlink {
+    color: blue;
+    cursor: pointer;
+}
+.carlink:hover {
+    cursor: pointer;
+}
+.carboxone {
+    margin: 0 0 20px;
+}
+.carboxone table {
+    border-collapse: collapse;
+    font-size: 9pt;
+    width: 100%;
+}
+.carboxone table tr td {
+    background-color: #EFEFEF;
+    border: 1px solid gray;
+}
+#carbox {
+    font-size: 7pt;
+}
+#boxstatic {
+    height: 200px;
+}
+.boxsimple {
+    margin: 1em 0;
+}
+#carbox table, #box table, #boxstatic table {
+    border-collapse: collapse;
+    width: 100%;
+}
+#carbox th, #carbox td, #box th, #box td, #boxstatic th, #boxstatic td {
+    border-top: 1px solid black;
+    padding: 0 10px;
+    text-align: left;
+}
+#carbox th, #box th, #boxstatic th {
+    background-color: #AAEEFF;
+    border-top: 0 solid black;
+}
+#carbox th, #carbox td, #box th, #box td {
+    padding: 0 2px;
+}
+.carboxhistory {
+    background-color: #DDFFDD;
+}
+.actioncell {
+    background-color: #FDEAEA;
+    border-left: 1px solid gray;
+    text-align: center;
+}
+.caractioncell {
+    border-left: 1px solid gray;
+    margin: 0;
+    padding: 0;
+    width: 60px;
+}
+.caractioncell div {
+    height: 20px;
+    overflow: hidden;
+}
+.caractioncell div div {
+    display: block;
+    float: left;
+    height: 20px;
+    margin: 0;
+    padding: 0;
+    width: 20px;
+}
+.caractioncell div div:hover {
+    cursor: pointer;
+}
+.carphoto {
+    font-size: 8pt;
+    margin: 0 0 20px;
+}
+.carphoto img {
+    border: 1px solid gray;
+}

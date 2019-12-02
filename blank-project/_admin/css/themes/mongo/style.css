@@ -1,0 +1,85 @@
+/* Theme Specific CSS */
+
+/* Heading */
+.heading{
+    padding:10px 0px 10px 10px;
+}
+.heading h1 a{
+    color:#777;
+    text-decoration: none;
+}
+
+/* Sidebar */
+.sidebar{
+    background: #FFF !important;
+}
+.outer{
+    width:100%;
+    background:#FFF;
+}
+.btn.sideLink {
+    color: #FFF;
+    background: #328932;
+    width:100%;
+    text-align: left;
+    font-family: sans-serif !important;
+    font-size:12px;
+    font-weight: bold;
+    color:#FFF !important;
+}
+.btn.sideLink:hover {
+    background: #3e2c1d;
+}
+.btn.sideLinkReverse {
+    color: #FFF !important;
+    background: #3e2c1d;
+    width:100%;
+    text-align: left;
+    font-family: sans-serif !important;
+    font-size:12px;
+    font-weight: bold;
+}
+.btn.sideLinkReverse:hover {
+    background: #318932;
+}
+/* Table */
+.table{
+    border-top:5px solid #328932;
+
+}
+thead tr th{
+    color:#FFF;
+    background-color: #3e2c1d;
+}
+thead tr th a{
+    color:#FFF;
+}
+thead tr th a:hover{
+    color:#FFF;
+}
+/* Form Buttons */
+.btn.btn-primary {
+    color: #FFF;
+    background: #328932;
+    font-family: sans-serif !important;
+    font-size:12px;
+}
+.btn.btn-primary:hover {
+    background: #3e2c1d;
+}
+/* Login Box */
+.br-lblue{
+    background-color: #328932;
+}
+.btn.btn-info{
+    background-color: #328932;
+}
+.btn.btn-info:hover{
+    background-color: #333;
+}
+#login-left{
+    background-color: #328932;
+}
+#login-right{
+    background-color: #328932;
+}
