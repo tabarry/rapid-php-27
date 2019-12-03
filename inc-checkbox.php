@@ -52,7 +52,7 @@ if ($_POST['frmDetailsSourceText'] != 'Checkbox Text..') {
 <table width=\"100%\" class=\"table table-hover table-bordered tbl\">
                                                 <thead>
                                                     <tr>
-                                                        <th width=\"90%\">GROUPS</th>
+                                                        <th width=\"90%\">".strtoupper(str_replace('-', ' ', explodeExtract($t1, "_", 0)))."</th>
                                                         <th width=\"10%\" class=\"right\">
                                                             &nbsp;
                                                             <?php if (\$addAccess == 'true') { ?>    
@@ -98,7 +98,7 @@ foreach (\$result['result'] as \$row) {
 <table width=\"100%\" class=\"table table-hover table-bordered tbl\">
                                                 <thead>
                                                     <tr>
-                                                        <th width=\"90%\">GROUPS</th>
+                                                        <th width=\"90%\">".strtoupper(str_replace('-', ' ', explodeExtract($t1, "_", 0)))."</th>
                                                         <th width=\"10%\" class=\"right\">
                                                             &nbsp;
                                                             <?php if (\$addAccess == 'true') { ?>    
