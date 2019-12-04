@@ -27,10 +27,10 @@ $addCode .="
 <?php if (\$addAccess == 'true') { ?>    
 <a title=\"Add new record..\" rel=\"prettyPhoto[iframes]\" href=\"<?php echo ADMIN_URL; ?>" . $addpage . "-add<?php echo PHP_EXTENSION;?>/?overlay=yes&iframe=true&width=80%&height=100%\"><i class=\"fa fa-plus\"></i></a>
 
-<a onclick=\"suReload3('" . $_POST['frmField'][$i] . "','<?php echo ADMIN_URL; ?>','<?php echo suCrypt('" . $table . "',TRUE);?>','<?php echo suCrypt('" . $fieldId . "',TRUE);?>','<?php echo suCrypt('" . $fieldText . "',TRUE);?>');\" href=\"javascript:;\"><i class=\"fa fa-undo\"></i></a>    
+<a onclick=\"suReload3('radioLinkArea_" . $_POST['frmField'][$i] . "','<?php echo ADMIN_URL; ?>','<?php echo suCrypt('" . $table . "',TRUE);?>','<?php echo suCrypt('" . $fieldId . "',TRUE);?>','<?php echo suCrypt('" . $fieldText . "',TRUE);?>');\" href=\"javascript:;\"><i class=\"fa fa-undo\"></i></a>    
 <?php } ?>    
 </label>
-                                <div>
+                                <div id=\"radioLinkArea_" . $_POST['frmField'][$i] . "\">
 
                                 <?php
                                 
