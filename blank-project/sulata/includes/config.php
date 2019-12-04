@@ -46,7 +46,7 @@ if (!strstr($_SERVER['HTTP_HOST'], ".")) {
     define('DB_PASSWORD', '#DB_PASSWORD#');
 } else {
     if (!isset($_GET['debug'])) { //Debug mode can be toggled from querystring as ?debug=0 or ?debug=1
-        define('DEBUG', TRUE);
+        define('DEBUG', FALSE);
     } else {
         define('DEBUG', $_GET['debug']);
     }

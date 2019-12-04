@@ -1,6 +1,7 @@
 - DB name auto-fills when project name is typed when creating a project.
 - DB user and password stores in cookie for future reference when creating project.
 - Grid division of fields is possible at page page creation level.
+- Radio button added as another field option
 - Project's default login and password is created and stored in config.php file.
 - This user does not show in Users module.
 - Media File and Media Categories have been merged to Media.
@@ -28,4 +29,4 @@
 - Generic error message will show detailed error with DEBUG=TRUE.
 - Email prints in Debug mode.
 - Overlay is passed on every link.
-- Radio button added as another option
+- Site specific css added, this-site.css
