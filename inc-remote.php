@@ -49,6 +49,9 @@ for ($i = 1; $i <= sizeof($_POST['frmType']) - 1; $i++) {
     if ($_POST['frmType'][$i] == 'Dropdown from DB') {
         $validateAs .= " '" . $_POST['frmField'][$i] . "_validateas'" . "=>'required', ";
     }
+    if ($_POST['frmType'][$i] == 'Radio from DB') {
+        $validateAs .= " '" . $_POST['frmField'][$i] . "_validateas'" . "=>'required', ";
+    }
     if ($_POST['frmType'][$i] == 'Searchable Dropdown') {
         $validateAs .= " '" . $_POST['frmField'][$i] . "_validateas'" . "=>'required', ";
         //Decided if parent needs to be reoloaded or reset

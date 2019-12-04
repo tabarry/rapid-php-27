@@ -19,6 +19,14 @@ if ($result['num_rows'] == 0) {
 
 $pageName = 'Change Password';
 $pageTitle = 'Change Password';
+
+if ($_SESSION[SESSION_PREFIX . 'user__Type'] == 'Private') {
+    $readonly = 'noreadonly';
+    $first_login_message = FIRST_LOGIN_MESSAGE;
+} else {
+    $readonly = 'readonly';
+    $first_login_message = RESET_LOGIN_MESSAGE;
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -81,7 +89,7 @@ $pageTitle = 'Change Password';
                                 <!--SU STARTS-->
                                 <?php
                                 if ($_SESSION[SESSION_PREFIX . 'user__Password_Reset'] == 'Yes') {
-                                    echo suInfo(FIRST_LOGIN_MESSAGE);
+                                    echo suInfo($first_login_message);
                                 }
                                 ?>
                                 <form class="form-horizontal" action="<?php echo ADMIN_SUBMIT_URL; ?>users-remote<?php echo PHP_EXTENSION; ?>/update-password/" accept-charset="utf-8" name="suForm" id="suForm" method="post" target="remote" enctype="multipart/form-data">
@@ -100,7 +108,7 @@ $pageTitle = 'Change Password';
                                             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">                
                                                 <label><?php echo $dbs_sulata_users['user__Email_req']; ?><?php echo $dbs_sulata_users['user__Email_title']; ?>:</label>
                                                 <?php
-                                                $arg = array('type' => $dbs_sulata_users['user__Email_html5_type'], 'name' => 'user__Email', 'id' => 'user__Email', 'autocomplete' => 'off', 'maxlength' => $dbs_sulata_users['user__Email_max'], 'value' => suUnstrip($row['user__Email']), $dbs_sulata_users['user__Email_html5_req'] => $dbs_sulata_users['user__Email_html5_req'], 'class' => 'form-control', 'readonly' => 'readonly');
+                                                $arg = array('type' => $dbs_sulata_users['user__Email_html5_type'], 'name' => 'user__Email', 'id' => 'user__Email', 'autocomplete' => 'off', 'maxlength' => $dbs_sulata_users['user__Email_max'], 'value' => suUnstrip($row['user__Email']), $dbs_sulata_users['user__Email_html5_req'] => $dbs_sulata_users['user__Email_html5_req'], 'class' => 'form-control', $readonly => $readonly);
                                                 echo suInput('input', $arg);
                                                 ?>
                                             </div>

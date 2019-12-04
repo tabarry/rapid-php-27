@@ -290,7 +290,7 @@ if ($do == "update-password") {
 //update record
     $extraSql = '';
 
-    $sql = "UPDATE sulata_users SET user__Password='" . crypt(suStrip($_POST['user__Password']), suStrip($_POST['user__Email'])) . "',user__Password_Reset='No', user__Last_Action_On ='" . date('Y-m-d H:i:s') . "',user__Last_Action_By='" . $_SESSION[SESSION_PREFIX . 'user__Name'] . "', user__dbState='Live' " . $extraSql . " WHERE user__ID='" . $_SESSION[SESSION_PREFIX . 'user__ID'] . "'";
+    $sql = "UPDATE sulata_users SET user__Email='" . suStrip($_POST['user__Email']) . "',user__Password='" . crypt(suStrip($_POST['user__Password']), suStrip($_POST['user__Email'])) . "',user__Password_Reset='No', user__Last_Action_On ='" . date('Y-m-d H:i:s') . "',user__Last_Action_By='" . $_SESSION[SESSION_PREFIX . 'user__Name'] . "', user__dbState='Live' " . $extraSql . " WHERE user__ID='" . $_SESSION[SESSION_PREFIX . 'user__ID'] . "'";
     $result = suQuery($sql);
 
     if ($result['errno'] > 0) {

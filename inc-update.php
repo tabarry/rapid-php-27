@@ -10,7 +10,7 @@ $extraSqlx2 = '';
 $extraSqlx3 = '';
 $addCode = '';
 
-$password_condition2='';
+$password_condition2 = '';
 $password_condition = '';
 $previous_password = '';
 $class_password = '';
@@ -76,6 +76,9 @@ for ($i = 0; $i <= sizeof($_POST['frmField']) - 1; $i++) {
     }
     if ($_POST['frmType'][$i] == 'Dropdown from DB') {
         include('inc-add-dbdropdownbox.php');
+    }
+    if ($_POST['frmType'][$i] == 'Radio from DB') {
+        include('inc-add-dbradio.php');
     }
     if ($_POST['frmType'][$i] == 'Quick Pick') {
         include('inc-add-quickpick-textarea.php');

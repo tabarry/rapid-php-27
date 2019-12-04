@@ -22,7 +22,7 @@ set_time_limit(0);
                         <fieldset name="frmSet_<?php echo $i; ?>">
                             <legend><a href="javascript:;" onClick="$('#suForm_<?php echo $i; ?>').toggle()"><?php echo $_POST["table"][$i]; ?></a></legend>
                             <form style="display:none" name="suForm_<?php echo $i; ?>" action="step4.php" method="post" id="suForm_<?php echo $i; ?>" target="remote_<?php echo $i; ?>" onsubmit="return validate3('suForm_<?php echo $i; ?>');">
-                                
+
                                 <input type="hidden" name="frmSequence" value="<?php echo $i; ?>"/>
                                 <input type="hidden" name="db" value="<?php echo $_POST["db"]; ?>"/>
                                 <input type="hidden" name="table" value="<?php echo $_POST["table"][$i]; ?>"/>
@@ -52,15 +52,15 @@ set_time_limit(0);
                                     $cnt = 0;
                                     $varchar = array();
                                     while ($row = mysqli_fetch_array($rs)) {
-                                        
+
                                         $f_id = "";
                                         $f_name = "";
-                                        
+
                                         //collect varchar fields for inline edit
-                                        if(stristr($row[1],'char')){
+                                        if (stristr($row[1], 'char')) {
                                             array_push($varchar, $row[0]);
                                         }
-                                        
+
                                         if ($row[4] == 'UNI') {
                                             $uniqueField = $row[0];
                                             $unique = makeFieldLabel($row[0]);
@@ -163,6 +163,7 @@ set_time_limit(0);
                                                         <option <?php makeFieldType($row[8], $row[0], $row[1], "Date"); ?>>Date</option>
                                                         <option <?php makeFieldType($row[8], $row[0], $row[1], "Enum"); ?>>Enum</option>
                                                         <option <?php makeFieldType($row[8], $row[0], $row[1], "Dropdown from DB"); ?>>Dropdown from DB</option>
+                                                        <option <?php makeFieldType($row[8], $row[0], $row[1], "Radio from DB"); ?>>Radio from DB</option>
                                                         <option <?php makeFieldType($row[8], $row[0], $row[1], "Autocomplete"); ?>>Autocomplete</option>
                                                         <option <?php makeFieldType($row[8], $row[0], $row[1], "Searchable Dropdown"); ?>>Searchable Dropdown</option>
                                                         <option <?php makeFieldType($row[8], $row[0], $row[1], "Quick Pick Textarea"); ?>>Quick Pick</option>
@@ -222,8 +223,8 @@ set_time_limit(0);
 
                                     <label>*Pageset Name:</label>
                                     <input type="text" name="frmFormsetvalue" id="frmFormsetvalue" value="<?php
-                                $frmFormsetvalue = explodeExtract($_POST["table"][$i], "_", 0);
-                                echo $frmFormsetvalue = str_replace('_', '-', $frmFormsetvalue);
+                                    $frmFormsetvalue = explodeExtract($_POST["table"][$i], "_", 0);
+                                    echo $frmFormsetvalue = str_replace('_', '-', $frmFormsetvalue);
                                     ?>"/>
                                     <label>*Sub Folder Name:</label>
                                     <input type="text" name="frmSubFolder" id="frmSubFolder" value="_admin"/>          
@@ -232,28 +233,26 @@ set_time_limit(0);
 
                                     <input type="hidden" name="primary" value="<?php echo $primary; ?>"/>
                                     <input type="hidden" name="varchars" value="<?php echo urlencode(json_encode($varchar)); ?>"/>
-                                        <label>Detail Table Source:</label>
+                                    <label>Detail Table Source:</label>
 
-                                        <select name="frmDetailsSourceText" id="frmDetailsSourceText" disabled1="true" class="select">
-                                            <option>Checkbox Text..</option>
-                                            <?php echo tableDd($_POST["db"], ''); ?>
-                                        </select>
-                                        <select name="frmDetailsSourceValue" id="frmDetailsSourceValue" disabled1="true" class="select">
-                                            <option>Checkbox Value..</option>
-                                            <?php echo tableDd($_POST["db"], ''); ?>
-                                        </select> 
-                                        <label>Detail Table Destination:</label>
+                                    <select name="frmDetailsSourceText" id="frmDetailsSourceText" disabled1="true" class="select">
+                                        <option>Checkbox Text..</option>
+                                        <?php echo tableDd($_POST["db"], ''); ?>
+                                    </select>
+                                    <select name="frmDetailsSourceValue" id="frmDetailsSourceValue" disabled1="true" class="select">
+                                        <option>Checkbox Value..</option>
+                                        <?php echo tableDd($_POST["db"], ''); ?>
+                                    </select> 
+                                    <label>Detail Table Destination:</label>
 
-                                        <select name="frmDetailsDestText" id="frmDetailsDestText" disabled1="true" class="select">
-                                            <option>Reference of Master Table..</option>
-                                            <?php echo tableDd($_POST["db"], ''); ?>
-                                        </select>
-                                        <select name="frmDetailsDestValue" id="frmDetailsDestValue" disabled1="true" class="select">
-                                            <option>Checked field goes in..</option>
-                                            <?php echo tableDd($_POST["db"], ''); ?>
-                                        </select> 
-
-
+                                    <select name="frmDetailsDestText" id="frmDetailsDestText" disabled1="true" class="select">
+                                        <option>Reference of Master Table..</option>
+                                        <?php echo tableDd($_POST["db"], ''); ?>
+                                    </select>
+                                    <select name="frmDetailsDestValue" id="frmDetailsDestValue" disabled1="true" class="select">
+                                        <option>Checked field goes in..</option>
+                                        <?php echo tableDd($_POST["db"], ''); ?>
+                                    </select> 
 
 
 
@@ -265,42 +264,44 @@ set_time_limit(0);
 
 
 
-                                        <?php suIframe('remote_' . $i); ?>
-                                        </form>
-                                        </fieldset>
-                                    <?php } ?>
-                                    <!--upload form-->
-                                    <form name="uploadForm" id="uploadForm" action="template/upload.php" method="post" enctype="multipart/form-data" target="remote">
 
-                                        <label>*Folder:</label>
-                                        <select name="folderName" id="folderName" onChange="copyFolderName(this.value)">
-                                            <option value="">Select..</option>
-                                            <?php echo buildWww("../"); ?>
-                                        </select>
-                                        <p id="copy">
-                                            <label>*Template:</label>
-                                            <input type="file" name="template" id="template" onChange="document.uploadForm.submit();"/>
-                                            <div>Template must have the tag [RAPID-CODE].</div>
-                                        </p>
-                                        <?php suIframe(); ?>
-                                    </form>
-                                    <!--db structure form-->
-                                    <form name="dbs" id="dbs" method="post" action="step-generate-structure.php" target="remote_dbs">
-                                        <input type="hidden" name="db" value="<?php echo $_POST['db']; ?>"/>
-                                        <input type="hidden" name="folder" id="folder" value=""/>
-                                    </form>
-                                    <?php suIframe('remote_dbs'); ?> 
 
-                                    <p>
-                                        <input type="button" name="Submit" value="Generate" id="generate" onclick="submitAll();"/>
-                                        <img src="images/blue-loading.gif" id="loading" style="display:none;" />
-                                    </p>
-                                    <p id="result"></p>
+                                    <?php suIframe('remote_' . $i); ?>
+                            </form>
+                        </fieldset>
+                    <?php } ?>
+                    <!--upload form-->
+                    <form name="uploadForm" id="uploadForm" action="template/upload.php" method="post" enctype="multipart/form-data" target="remote">
 
-                                    </div>
-                                    </div>
-                                    <!--FOOTER-->
-                                    <?php include('inc-footer.php'); ?>
-                                    </div>
-                                    </body>
-                                    </html>
+                        <label>*Folder:</label>
+                        <select name="folderName" id="folderName" onChange="copyFolderName(this.value)">
+                            <option value="">Select..</option>
+                            <?php echo buildWww("../"); ?>
+                        </select>
+                        <p id="copy">
+                            <label>*Template:</label>
+                            <input type="file" name="template" id="template" onChange="document.uploadForm.submit();"/>
+                            <div>Template must have the tag [RAPID-CODE].</div>
+                        </p>
+                        <?php suIframe(); ?>
+                    </form>
+                    <!--db structure form-->
+                    <form name="dbs" id="dbs" method="post" action="step-generate-structure.php" target="remote_dbs">
+                        <input type="hidden" name="db" value="<?php echo $_POST['db']; ?>"/>
+                        <input type="hidden" name="folder" id="folder" value=""/>
+                    </form>
+                    <?php suIframe('remote_dbs'); ?> 
+
+                    <p>
+                        <input type="button" name="Submit" value="Generate" id="generate" onclick="submitAll();"/>
+                        <img src="images/blue-loading.gif" id="loading" style="display:none;" />
+                    </p>
+                    <p id="result"></p>
+
+                </div>
+            </div>
+            <!--FOOTER-->
+            <?php include('inc-footer.php'); ?>
+        </div>
+    </body>
+</html>

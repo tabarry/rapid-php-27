@@ -28,3 +28,4 @@
 - Generic error message will show detailed error with DEBUG=TRUE.
 - Email prints in Debug mode.
 - Overlay is passed on every link.
+- Radio button added as another option

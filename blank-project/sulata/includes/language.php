@@ -67,7 +67,8 @@ define('DOWNLOAD_CSV', 'Download CSV');
 define('DOWNLOAD_PDF', 'Download PDF');
 
 /* Info Messages */
-define('FIRST_LOGIN_MESSAGE', 'You have logged in with a temporary password, please change it to something that you can remember.');
+define('FIRST_LOGIN_MESSAGE', 'You have logged in with a temporary email and password, please change it.');
+define('RESET_LOGIN_MESSAGE', 'You have logged in with a temporary password, please change it to something that you can remember.');
 define('PASSWORD_AUTO_GENERATED', 'Password has been auto-generated for your convenience.');
 
 
