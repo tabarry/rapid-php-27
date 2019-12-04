@@ -1,5 +1,5 @@
 <!-- Top modules menus -->
-<?php if ($getSettings['module_position'] == 'Top' || $getSettings['module_position'] == 'Both') { ?>
+<?php if ($_GET['overlay'] != 'yes' && ($getSettings['module_position'] == 'Sidebar' || $getSettings['module_position'] == 'Both')) { ?>
     <div>
         <nav class="navbar-default" role="navigation">
             <div class="container-fluid">
