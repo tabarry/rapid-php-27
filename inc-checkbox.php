@@ -58,14 +58,14 @@ if ($_POST['frmDetailsSourceText'] != 'Checkbox Text..') {
                                                             <?php if (\$addAccess == 'true') { ?>    
     <a title=\"Add new record..\" rel=\"prettyPhoto[iframes]\" href=\"<?php echo ADMIN_URL; ?>" . $newPage . "-add<?php echo PHP_EXTENSION;?>/?overlay=yes&iframe=true&width=100%&height=100%\"><i class=\"fa fa-plus\"></i></a>
 
-    <a onclick=\"suReload2('checkboxLinkArea','<?php echo ADMIN_URL; ?>','<?php echo suCrypt('" . $t1 . "'); ?>','<?php echo suCrypt('" . $f1 . "'); ?>','<?php echo suCrypt('" . $f2 . "'); ?>','<?php echo suCrypt('" . $t1a . "'); ?>','<?php echo suCrypt('" . $f1a . "'); ?>','<?php echo suCrypt('" . $f2a . "'); ?>','<?php echo suCrypt(\$id); ?>');\" href=\"javascript:;\"><i class=\"fa fa-undo\"></i></a>    
+    <a onclick=\"suReload2('checkboxLinkArea_" . $t1 . "','<?php echo ADMIN_URL; ?>','<?php echo suCrypt('" . $t1 . "'); ?>','<?php echo suCrypt('" . $f1 . "'); ?>','<?php echo suCrypt('" . $f2 . "'); ?>','<?php echo suCrypt('" . $t1a . "'); ?>','<?php echo suCrypt('" . $f1a . "'); ?>','<?php echo suCrypt('" . $f2a . "'); ?>','<?php echo suCrypt(\$id); ?>');\" href=\"javascript:;\"><i class=\"fa fa-undo\"></i></a>    
 <?php } ?> 
                                                         </th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
                                                 <td colspan=\"2\">
-                                                    <div id=\"checkboxLinkArea\">
+                                                    <div id=\"checkboxLinkArea_" . $t1 . "\">
 <?php
 foreach (\$result['result'] as \$row) {
 \$chkUid = \$row['" . $f1 . "'];
