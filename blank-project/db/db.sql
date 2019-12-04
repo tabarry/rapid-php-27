@@ -42,7 +42,8 @@ INSERT INTO `sulata_settings` (`setting__ID`, `setting__Type`, `setting__Options
 (29, 'Text', '', 'Super Admin Group ID', 'super_admin_group_id', '1', 'Private', 0, '2019-11-09 00:00:00', 'Installer', 'Live'),
 (30, 'Text', '', 'Super Admin User ID', 'super_admin_user_id', '1', 'Private', 0, '2019-11-11 00:00:00', 'Installer', 'Live'),
 (33, 'Dropdown', 'Yes,No', 'Show Password', 'show_password', 'Yes', 'Public', 0, '2019-11-23 14:26:35', 'Installer', 'Live'),
-(34, 'Text', '', 'Maximum Top Menu Links', 'maximum_top_menu_links', '5', 'Public', 0, '2019-11-26 09:50:24', 'Installer', 'Live');
+(34, 'Text', '', 'Maximum Top Menu Links', 'maximum_top_menu_links', '5', 'Public', 0, '2019-11-26 09:50:24', 'Installer', 'Live'),
+(35, 'Text', '', 'Maximum Side Menu Links', 'maximum_side_menu_links', '5', 'Public', 0, '2019-11-26 09:50:24', 'Installer', 'Live');
 
 DROP TABLE IF EXISTS `sulata_users`;
 CREATE TABLE `sulata_users` (`user__ID` int(11) NOT NULL,`user__Name` varchar(32) NOT NULL COMMENT '|s',`user__Email` varchar(64) NOT NULL COMMENT '|s',`user__Password` varchar(13) NOT NULL,`user__Picture` varchar(128) DEFAULT NULL,`user__Status` enum('Active','Inactive') NOT NULL DEFAULT 'Active' COMMENT '|s',`user__Notes` text,`user__Theme` varchar(24) NOT NULL DEFAULT 'default',`user__Type` enum('Private','Public') NOT NULL DEFAULT 'Public',`user__Sort_Order` int(11) NOT NULL DEFAULT '0',`user__Password_Reset` enum('Yes','No') NOT NULL DEFAULT 'Yes',`user__Last_Action_On` datetime NOT NULL,`user__Last_Action_By` varchar(64) NOT NULL,`user__dbState` enum('Live','Deleted') NOT NULL,`user__IP` varchar(15) NOT NULL DEFAULT '127.0.0.1') ENGINE=MyISAM DEFAULT CHARSET=utf8;
