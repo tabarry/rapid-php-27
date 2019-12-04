@@ -7,6 +7,7 @@ include('../sulata/includes/db-structure.php');
 //Check to stop page opening outside iframe
 //Check referrer
 //suCheckRef();
+
 if ($_GET['type'] == 'chk') {
     $tbl = suDecrypt($_GET['tbl']);
     $f1 = suDecrypt($_GET['f1']);
@@ -57,6 +58,19 @@ if ($_GET['type'] == 'chk') {
     echo '
         </ul>
         </div>';
+} elseif ($_GET['type'] == 'radio') {
+    $tbl = suDecrypt($_GET['tbl']);
+    $f1 = suDecrypt($_GET['f1']);
+    $f2 = suDecrypt($_GET['f2']);
+    $stateField = explode('__', $f1);
+    $stateField = $stateField[0] . '__dbState';
+    $sql = "SELECT $f1 AS f1, $f2 AS f2 FROM $tbl WHERE $stateField='Live' ORDER BY $f2";
+    //Check if the query is not destructive
+    if (suGetDestructiveQuery(DB_NAME, $tbl, $sql) == FALSE) {
+        suExit(INVALID_ACCESS);
+    }
+    echo suMakeRadio($sql, 'radio__Headers', $dbs_sulata_radio['radio__Headers_req'], '');
+    
 } else {
     $dd = "<option value='^'>Select..</option>";
     $tbl = suDecrypt($_GET['tbl']);

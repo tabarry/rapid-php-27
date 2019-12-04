@@ -75,15 +75,20 @@ function suToggleButton(arg) {
         }
     }
 }
-//Reload dropdown
+//Reload dropdown area
 function suReload(ele, url, tbl, f1, f2) {
     url = url + 'reload.php';
     $('#' + ele).load(url + '?tbl=' + tbl + '&f1=' + f1 + '&f2=' + f2);
 }
-//Reload dropdown
+//Reload checkbox area
 function suReload2(ele, url, tbl, f1, f2, tblb, f1b, f2b, id) {
     url = url + 'reload.php';
     $('#' + ele).load(url + '?type=chk&tbl=' + tbl + '&f1=' + f1 + '&f2=' + f2 + '&tblb=' + tblb + '&f1b=' + f1b + '&f2b=' + f2b + '&id=' + id);
+}
+//Reload radio area
+function suReload3(ele, url, tbl, f1, f2) {
+    url = url + 'reload.php';
+    $('#' + ele).load(url + '?type=radio&tbl=' + tbl + '&f1=' + f1 + '&f2=' + f2);
 }
 //Search dropdown
 //Sample code
