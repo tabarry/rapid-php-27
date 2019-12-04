@@ -5,8 +5,10 @@ include('../sulata/includes/get-settings.php');
 include('../sulata/includes/db-structure.php');
 
 //Check if it is an AJAX request
-if (empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) != 'xmlhttprequest') {
-    suExit(INVALID_ACCESS);
+if (DEBUG == FALSE) {
+    if (empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) != 'xmlhttprequest') {
+        suExit(INVALID_ACCESS);
+    }
 }
 //Check referrer
 suCheckRef();
