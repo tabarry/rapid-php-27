@@ -4,9 +4,12 @@ include('../sulata/includes/functions.php');
 include('../sulata/includes/get-settings.php');
 include('../sulata/includes/db-structure.php');
 
-//Check to stop page opening outside iframe
+//Check if it is an AJAX request
+if (empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) != 'xmlhttprequest') {
+    suExit(INVALID_ACCESS);
+}
 //Check referrer
-//suCheckRef();
+suCheckRef();
 
 if ($_GET['type'] == 'chk') {
     $tbl = suDecrypt($_GET['tbl']);
@@ -70,7 +73,6 @@ if ($_GET['type'] == 'chk') {
         suExit(INVALID_ACCESS);
     }
     echo suMakeRadio($sql, 'radio__Headers', $dbs_sulata_radio['radio__Headers_req'], '');
-    
 } else {
     $dd = "<option value='^'>Select..</option>";
     $tbl = suDecrypt($_GET['tbl']);
