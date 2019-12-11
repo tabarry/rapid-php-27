@@ -1,7 +1,7 @@
 <!-- Top modules menus -->
 <?php if ($_GET['overlay'] != 'yes' && ($getSettings['module_position'] == 'Sidebar' || $getSettings['module_position'] == 'Both')) { ?>
     <div>
-        <nav class="navbar-default" role="navigation">
+        <nav class="navbar-default" role="navigation" id="top-nav">
             <div class="container-fluid">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">

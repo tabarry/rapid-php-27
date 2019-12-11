@@ -529,3 +529,15 @@ function doChangePassword(fld) {
     $('#' + fld + '-change-password').hide()
 
 }
+function doHideMenusOnInOverlay() {
+    if (parent.frames.length > 1) {
+        if ($('#top-nav')) {
+            $('#top-nav').hide();
+        }
+        if ($('#side-outer-nav')) {
+            $('#side-outer-nav').hide();
+            $('.mainbar').css('margin-left','0px');
+
+        }
+    }
+}

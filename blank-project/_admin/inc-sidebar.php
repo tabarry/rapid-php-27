@@ -1,6 +1,5 @@
 <?php if ($_GET['overlay'] != 'yes' && ($getSettings['module_position'] == 'Sidebar' || $getSettings['module_position'] == 'Both')) { ?>
-    <div class="sidebar">
-
+    <div class="sidebar" id="side-outer-nav">
         <div class="sidey">
             <!-- Logo -->
             <!-- Sidebar navigation starts -->

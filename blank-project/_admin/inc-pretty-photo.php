@@ -18,5 +18,7 @@
                 _bsap.exec();
             }
         });
+        //Hide menus on overlay
+        doHideMenusOnInOverlay();
     });
 </script>
