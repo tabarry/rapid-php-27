@@ -113,3 +113,4 @@ Pages:
 102. Change to table icon on sort page (done)
 103. add PHP_EXTENSION with $_POST[referrer] on remote
 104. Check with dash in module name
+105. If currency, show currency in table header and table value
