@@ -956,13 +956,19 @@ if (!function_exists('suBarChart')) {
 
 }
 /* Mail */
+/* Mail */
 if (!function_exists('suMail')) {
 
-    function suMail($to, $subject, $message, $fromName, $fromEmail, $html = FALSE, $attachment = FALSE) {
+    function suMail($to, $subject, $message, $fromName, $fromEmail, $html = FALSE, $replyTo = '', $attachment = FALSE) {
+        if ($replyTo == '') {
+            $replyTo = $fromEmail;
+        }
         if ($html == FALSE) {
             $headers = 'MIME-Version: 1.0' . "\r\n";
             $headers .= "Content-Type:text/plain;charset=utf-8\r\n";
             $headers .= "From: $fromName <$fromEmail>" . "\r\n";
+            $headers .= "Reply-To: $replyTo" . "\r\n";
+
             if (DEBUG == TRUE) {
                 echo $message;
             } else {
@@ -974,7 +980,7 @@ if (!function_exists('suMail')) {
             if (function_exists('eregi_replace')) {
                 $body = eregi_replace("[\]", '', $body);
             }
-            $mail->AddReplyTo($fromEmail, $fromName);
+            $mail->AddReplyTo($replyTo, $fromName);
             $mail->SetFrom($fromEmail, $fromName);
             $mail->CharSet = 'UTF-8';
             $mail->AddAddress($to, $to);
