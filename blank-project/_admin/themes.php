@@ -66,7 +66,7 @@ $pageTitle = 'Click to select a theme';
                                 </div>
                                 <!--SU STARTS-->
 
-                                <form class="form-horizontal" action="<?php echo ADMIN_URL; ?>notes-remote<?php echo PHP_EXTENSION; ?>.php/update/" accept-charset="utf-8" name="suForm" id="suForm" method="post" target="remote" >
+                                <form class="form-horizontal" action="<?php echo ADMIN_URL; ?>notes-remote<?php echo PHP_EXTENSION; ?>/update/" accept-charset="utf-8" name="suForm" id="suForm" method="post" target="remote" >
 
 
 
@@ -84,7 +84,7 @@ $pageTitle = 'Click to select a theme';
                                                 if ((!in_array($file, $exclude)) && ($file[0] != '.')) {
                                                     ?>
                                                     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4"> 
-                                                        <a href="<?php echo ADMIN_URL; ?>themes-remote<?php echo PHP_EXTENSION; ?>.php/change/<?php echo $file; ?>/" target="remote"><img style="border:1px solid #111;margin:10px;" src="<?php echo ADMIN_URL; ?>css/themes/<?php echo $file; ?>/screenshot.png" alt="<?php echo $file; ?>"/></a>
+                                                        <a href="<?php echo ADMIN_URL; ?>themes-remote<?php echo PHP_EXTENSION; ?>/change/<?php echo $file; ?>/" target="remote"><img style="border:1px solid #111;margin:10px;" src="<?php echo ADMIN_URL; ?>css/themes/<?php echo $file; ?>/screenshot.png" alt="<?php echo $file; ?>"/></a>
                                                     </div>
                                                     <?php
                                                 }

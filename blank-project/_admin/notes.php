@@ -76,7 +76,7 @@ $pageTitle = 'Update Notes';
                                 </div>
                                 <!--SU STARTS-->
 
-                                <form class="form-horizontal" action="<?php echo ADMIN_URL; ?>notes-remote<?php echo PHP_EXTENSION; ?>.php/update/" accept-charset="utf-8" name="suForm" id="suForm" method="post" target="remote" >
+                                <form class="form-horizontal" action="<?php echo ADMIN_URL; ?>notes-remote<?php echo PHP_EXTENSION; ?>/update/" accept-charset="utf-8" name="suForm" id="suForm" method="post" target="remote" >
                                     <link rel=\"stylesheet\" href=\"<?php echo BASE_URL; ?>sulata/themes/redmond/jquery-ui.css\">
 
                                     <div class="gallery clearfix">
