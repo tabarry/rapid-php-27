@@ -214,8 +214,10 @@ if (!function_exists('suStrip')) {
 /* Unstrip */
 if (!function_exists('suUnstrip')) {
 
-    function suUnstrip($str) {
-        $str = htmlspecialchars(stripslashes($str));
+    function suUnstrip($str, $urlOnly = FALSE) {
+        if ($urlOnly == FALSE) {
+            $str = htmlspecialchars(stripslashes($str));
+        }
         if (LOCAL == TRUE) {
             $str = str_replace(WEB_URL, LOCAL_URL, $str);
         } else {
@@ -225,6 +227,7 @@ if (!function_exists('suUnstrip')) {
     }
 
 }
+
 /* Print JS */
 if (!function_exists('suPrintJS')) {
 
