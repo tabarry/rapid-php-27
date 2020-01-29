@@ -99,6 +99,7 @@ $permissionsExclude = array(
     'modules.php',
     'notes.php',
     'themes.php',
+    'themes-remote.php',
     'users-change-password.php',
 );
 //Exclude pages from the sidebar and modules
