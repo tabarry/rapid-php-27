@@ -187,7 +187,8 @@ if (suSegment(2) == 'duplicate') {
                                                 array_push($chkArr, $row['usergroup__Group']);
                                             }
 
-                                            $sql = "SELECT group__ID, group__Name FROM sulata_groups WHERE group__dbState ='Live' AND group__Status='Active' ORDER BY group__Name";
+                                           
+                                            $sql = "SELECT group__ID, group__Name FROM sulata_groups WHERE group__dbState ='Live' AND group__Status='Active' AND group__Name != 'Super Admin' ORDER BY group__Name";
                                             $result = suQuery($sql);
                                             ?>
                                             <table width="100%" class="table table-hover table-bordered tbl">
